@@ -18,11 +18,11 @@ void simulatePipe() {
     // Child Process
     if (pid == 0) {
         close(pipefd[0]); // Close read end
-        string message = "Hello from Child Process (PIPE)";
-        write(pipefd[1], message.c_str(), message.size() + 1);
+        string message1 = "Hello from Child Process (PIPE)";
+        write(pipefd[1], message1.c_str(), message1.size() + 1);
         close(pipefd[1]);
         // Improved message clarity (Revision 2)
-        string message = "Message sent using IPC Pipe mechanism";
+        string message2 = "Message sent using IPC Pipe mechanism";
     } 
     // Parent Process
     else {
